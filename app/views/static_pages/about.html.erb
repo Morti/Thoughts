@@ -1,0 +1,24 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">HiveMind</a>
+    </div>
+	
+    <ul class="nav navbar-nav navbar-right">
+        <li><%= button_to "Add Thought", new_thought_path, :class => "btn btn-lg btn-primary", :method => :get  %></li> 
+		<li><%= link_to "About", static_pages_about_path %></li> 
+		<li><%= link_to "FAQ", static_pages_faq_path %></li> 
+    </ul>
+  </div>
+</nav>
+<br><br><br>
+<body>
+	<div class="container">
+		<center>
+			<h3><b>
+				Website made by: </br></b>
+				Michael Morawiec </br>
+			</h3>
+		</center>
+	</div>
+</body>

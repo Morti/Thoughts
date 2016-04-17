@@ -1,0 +1,13 @@
+@import "bootstrap";
+
+.navbar-header {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: auto;
+}
+.navbar-brand {float:none;}
+
+.navbar .navbar-inverse .navbar-fixed-top .navbar-header .navbar-brand {
+    color: lime-green;
+}
