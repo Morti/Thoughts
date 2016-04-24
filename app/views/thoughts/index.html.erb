@@ -2,19 +2,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">WorldThoughts</a>
-    </div>
-	
-    <ul class="nav navbar-nav navbar-right">
-        <li><%= button_to "Add your thought!", new_thought_path, :class => "btn btn-lg btn-primary", :method => :get  %></li>
-		<li><%= link_to "About", static_pages_about_path %></li> 
-		<li><%= link_to "FAQ", static_pages_faq_path %></li> 
-    </ul>
-  </div>
-</nav>
+<div>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <a class="navbar-brand" href="/">WorldThoughts</a>
+		</div>
+		
+		<ul class="nav navbar-nav navbar-right">
+			<li><%= button_to "Add your thought!", new_thought_path, :class => "btn btn-lg btn-primary", :method => :get  %></li>
+			<li><%= link_to "About", static_pages_about_path %></li> 
+			<li><%= link_to "FAQ", static_pages_faq_path %></li> 
+		</ul>
+	  </div>
+	</nav>
+</div>
 <br><br><br><br><br>
 <% @thoughts.each_slice(3) do |thoughts| %>
     <div class="row">
