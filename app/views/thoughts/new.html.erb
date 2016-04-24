@@ -3,13 +3,13 @@
 </head>
 <body>
 <div>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<nav class="navbar navbar-inverse navbar-static-top">
 	  <div class="container-fluid">
 		<div class="navbar-header">
 		  <a class="navbar-brand" href="/">WorldThoughts</a>
 		</div>
 		
-		<ul class="nav navbar-nav navbar-right">
+		<ul class="nav navbar-nav navbar-right pull-right">
 			<li><%= button_to "Add your thought!", new_thought_path, :class => "btn btn-lg btn-primary", :method => :get  %></li> 
 			<li><%= link_to "About", static_pages_about_path %></li> 
 			<li><%= link_to "FAQ", static_pages_faq_path %></li> 
@@ -17,7 +17,6 @@
 	  </div>
 	</nav>
 </div>
-<br><br><br><br><br>
 <%= form_for(@thoughts) do |f| %>
   <ul>
   <% @thoughts.errors.full_messages.each do |error| %>
