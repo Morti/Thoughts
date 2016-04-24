@@ -17,26 +17,28 @@
 	  </div>
 	</nav>
 </div>
-<% @thoughts.each_slice(3) do |thoughts| %>
-    <div class="row">
-		<% thoughts.each do |thought| %>
-		<div class="col-lg-4">
-			<div class="panel panel-primary">
-				<div class="panel-heading clearfix">
-				  <h3 class="panel-title pull-left">
-					Feeling
-					<%= thought.mood %>
-					in
-					<%= thought.location %>
-				  </h3>
-				  <%= button_to "Report", thoughts_path, :class => "btn btn-xs btn-danger pull-right", :method => :get  %>
-				</div>
-				<div class="panel-body">
-				  <%= thought.body %>
+<div class="container">
+	<% @thoughts.each_slice(3) do |thoughts| %>
+		<div class="row no-gutter">
+			<% thoughts.each do |thought| %>
+			<div class="col-lg-4">
+				<div class="panel panel-primary">
+					<div class="panel-heading clearfix">
+					  <h3 class="panel-title pull-left">
+						Feeling
+						<%= thought.mood %>
+						in
+						<%= thought.location %>
+					  </h3>
+					  <%= button_to "Report", thoughts_path, :class => "btn btn-xs btn-danger pull-right", :method => :get  %>
+					</div>
+					<div class="panel-body">
+					  <%= thought.body %>
+					</div>
 				</div>
 			</div>
+			<% end %>    
 		</div>
-		<% end %>    
-	</div>
-<% end %>
+	<% end %>
+</div>
 </body>
