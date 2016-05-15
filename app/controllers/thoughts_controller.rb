@@ -21,6 +21,9 @@ class ThoughtsController < ApplicationController
 	def faq
 	end
 	
-	def report
+	def destroy
+		@thoughts = Thought.find(params[:id])
+		@thoughts.destroy
+		redirect_to thoughts_path(@thoughts)
 	end
 end

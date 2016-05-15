@@ -30,7 +30,7 @@
 						in
 						<%= thought.location %>
 					  </h3>
-					  <%= button_to "Report", thoughts_path, :class => "btn btn-xs btn-danger pull-right", :method => :get  %>
+					  <%= button_to "delete", thought_path(thought.id), :class => "btn btn-xs btn-danger pull-right", :method => :delete %>
 					</div>
 					<div class="panel-body">
 					  <%= thought.body %>
