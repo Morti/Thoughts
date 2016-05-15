@@ -2,7 +2,7 @@ class ThoughtsController < ApplicationController
 	include ThoughtsHelper
 	
 	def index
-  		@thoughts = Thought.all
+  		@thoughts = Thought.all.limit(50).order('id desc')
 	end
 	
 	def new
