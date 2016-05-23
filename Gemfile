@@ -10,6 +10,9 @@ end
 group :production do
    gem 'pg'
 end
+
+gem 'sorcery'
+
 # Use SCSS for stylesheets
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -32,6 +35,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt'
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'

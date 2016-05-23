@@ -6,6 +6,16 @@
     width: auto;
 }
 
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: center;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
 .navbar-brand {
 	float: none;
 }

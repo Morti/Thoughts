@@ -9,6 +9,13 @@
 		  <%= link_to image_tag( "world-thoughts-logo-v2.png", height: "60", width: "180"), root_path %>
 		</div>
 		
+		<p class="nav navbar-nav navbar-right pull-left text-success">
+		<% if logged_in? %>
+		<%= "Logged in as #{current_user.username}"%>
+		<%= link_to "(logout)", logout_path %> 
+		<% end %>
+		</p>
+		
 		<ul class="nav navbar-nav navbar-right pull-right">
 			<li><%= button_to "Add your thought!", new_thought_path, :class => "btn btn-lg btn-primary", :method => :get  %></li>
 			<li><%= link_to "About", static_pages_about_path %></li> 
@@ -30,7 +37,9 @@
 						in
 						<%= thought.location %>
 					  </h3>
+					  <% if logged_in? %>
 					  <%= button_to "delete", thought_path(thought.id), :class => "btn btn-xs btn-danger pull-right", :method => :delete %>
+					  <% end %>
 					</div>
 					<div class="panel-body">
 					  <%= thought.body %>
