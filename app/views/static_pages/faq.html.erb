@@ -10,21 +10,40 @@
 		</div>
 		
 		<ul class="nav navbar-nav navbar-right pull-right">
-			<li><%= button_to "Add your thought!", new_thought_path, :class => "btn btn-lg btn-primary", :method => :get  %></li>
-			<li><%= link_to "About", static_pages_about_path %></li> 
 			<li><%= link_to "FAQ", static_pages_faq_path %></li> 
+			<li><%= button_to "Add your thought!", new_thought_path, :class => "btn btn-lg btn-primary", :method => :get  %></li>
 		</ul>
 	  </div>
 	</nav>
 </div>
 	<div class="container">
 		<center>
-			<h3><b>
-				How does it work?: </br></b>
-				The purpose of the site is too show what the world is thinking right now! </br>
-				
-				For now the site is completely anonymous, might implement some user system later. </br>
-			</h3>
+			<h4>
+			<p>
+			    <b>How does it work?: </br></b>
+				The purpose of the site is too show what the world is thinking right now. The site always only shows
+				the newly posted thoughts, up to a certain amount. So everytime you update the site you might see new 
+				thoughts on the top depending on how many are posting. Only the latest 100 posts are saved in the database so 
+				nothing is saved.
+				</br></br>
+				In the future, if more people are using the site and many thoughts are posted, I want the site to show a 
+				continous flow of thoughts for people to see. So you can visit the site when you want to see the latest thoughts
+				of people around the world.
+			</p>
+			 </br> </br>
+            <p>			
+			    <b>Is it anonymous?: </br></b>
+				Yes! For now the site is completely anonymous, only the latest 100 posts are saved in the database 
+				nothing else is saved.
+				</br></br>
+				If the site becomes popular enought, I might implement a user system. If that is what the users want. </br>
+			</p>
+			 </br> </br>
+			<p>			
+			    <b>Site is created and maintained by: </br></b>
+				Michael Morawiec, the site is maintained on github.com/Morti/Thoughts
+			</p>
+			</h4>
 		</center>
 	</div>
 </body>
