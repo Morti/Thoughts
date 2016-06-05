@@ -24,31 +24,14 @@
 	</nav>
 </div>
 <div class="container">
-	<% @thoughts.each_slice(3) do |thoughts| %>
-		<div class="row">
-			<% thoughts.each do |thought| %>
-			<div class="col-lg-4">
-				<div class="panel panel-primary">
-					<div class="panel-heading clearfix">
-					  <h3 class="panel-title pull-left">
-						Feeling
-						<%= thought.mood %>
-						in
-						<%= thought.location %>
-					  </h3>
-					  <% if logged_in? %>
-					  <%= button_to "delete", thought_path(thought.id), :class => "btn btn-xs btn-danger pull-right", :method => :delete %>
-					  <% end %>
-					</div>
-					<div class="panel-body">
-					  <%= thought.body %>
-					</br></br>
-					<%= link_to "Comments", thought_path(thought.id) %>
-					</div>
-				</div>
-			</div>
-			<% end %>    
-		</div>
-	<% end %>
+	<h1><%= @thoughts.mood %> in <%= @thoughts.location %> </h1>
+	<p><%= @thoughts.body %></p>
+	
+	<h3>Comments</h3>
+	<%= render partial: 'thoughts/comment', collection: @thoughts.comments %>
+
+	
+	<%= link_to "<< Back to all thoughts", root_path %>
+
 </div>
 </body>

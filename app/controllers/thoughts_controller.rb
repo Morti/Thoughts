@@ -8,6 +8,10 @@ class ThoughtsController < ApplicationController
   		@thoughts = Thought.all.limit(50).order('id desc')
 	end
 	
+	def show
+		@thoughts = Thought.find(params[:id])
+	end
+	
 	def new
 		@thoughts = Thought.new
 	end
