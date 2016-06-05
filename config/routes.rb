@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   get 'static_pages/faq'
   
   HiveMind::Application.routes.draw do
-    resources :thoughts
+    resources :thoughts do
+		resources :comments
+	end
+		
 	resources :users
 	
 	resources :user_sessions, only: [ :new, :create, :destroy ]

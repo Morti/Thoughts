@@ -43,7 +43,7 @@
 					<div class="panel-body">
 					  <%= thought.body %>
 					</br></br>
-					<%= link_to "Comments", thought_path(thought.id) %>
+					<%= link_to "Comments ", thought_path(thought.id) %> (<%= thought.comments.size %>)
 					</div>
 				</div>
 			</div>

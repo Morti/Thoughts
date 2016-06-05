@@ -10,6 +10,9 @@ class ThoughtsController < ApplicationController
 	
 	def show
 		@thoughts = Thought.find(params[:id])
+		
+		@comment = Comment.new
+		@comment.thought_id = @thoughts.id
 	end
 	
 	def new

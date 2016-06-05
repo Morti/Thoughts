@@ -24,14 +24,24 @@
 	</nav>
 </div>
 <div class="container">
-	<h1><%= @thoughts.mood %> in <%= @thoughts.location %> </h1>
-	<p><%= @thoughts.body %></p>
+	<div class="panel panel-primary">
+					<div class="panel-heading clearfix">
+					  <h3 class="panel-title pull-left">
+						Feeling
+						<%= @thoughts.mood %>
+						in
+						<%= @thoughts.location %>
+					  </h3>
+					</div>
+					<div class="panel-body">
+					  <%= @thoughts.body %>
+					</div>
+	</div>
+	<%= link_to "<< Back to all thoughts", root_path %>
 	
 	<h3>Comments</h3>
 	<%= render partial: 'thoughts/comment', collection: @thoughts.comments %>
-
 	
-	<%= link_to "<< Back to all thoughts", root_path %>
-
+	<%= render partial: 'comments/form' %>
 </div>
 </body>
